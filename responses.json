@@ -1,0 +1,29 @@
+[
+
+    {
+        "question": "info pendaftaran",
+        "answer": "Selamat Datang di Fakultas Teknik.\nSilahkan pilih salah satu prodi:\n\n1. Informatika (/informatika)\n2. Teknik Sipil (/sipil)\n3.Teknik Mesin (/mesin)\n4.Teknik Industri (/industri)\n5. Sistem Informasi (/SI)\n\n(masukkan nama prodinya saja atau klik perintahnya)"
+    },
+    {
+        "question": "informatika",
+        "answer": "<b>TEKNIK INFORMATIKA</b> \n     merupakan bidang ilmu yang mempelajari teknologi komputer meliputi analisis matematis pengembangan, pengujian, evaluasi perangkat lunak (software), sistem operasi, dan kerja komputer. Lulusan teknik informatika dapat bekerja sebagai web developer secara penuh waktu atau paruh waktu dalam beberapa jenis organisasi, termasuk korporasi dan pemerintah atau sebagai freelancer."
+    },
+    {
+        "question": "teknik sipil",
+        "answer": "<b>TEKNIK SIPIL</b> \n     adalah bidang ilmu yang mempelajari perencanaan/perancangan, manufaktur, manajemen/pengelolaan, dan konservasi dari beragam fasilitas dan sistem untuk mendukung sebuah kota, pedesaan, dan perkotaan."
+    },
+    {
+        "question": "teknik mesin",
+        "answer": "<b>TEKNIK MESIN</b> \n     tidak melulu soal mesin motor, mobil, dan kegiatan perbengkelan lainnya. Tapi kamu juga akan belajar hal-hal terkait konversi energi, konstruksi dan perancangan, teknik produksi, juga material."
+    },
+    {
+        "question": "teknik industri",
+        "answer": "<b>TEKNIK INDUSTRI</b> \n     adalah bidang ilmu yang mempelajari bagaimana mengoptimalisasi kegiatan manusia seperti; produksi, pengelolaan dan ekonomi."
+    },
+    {
+        "question": "sistem informasi",
+        "answer": "<b>SISTEM INFORMASI</b> \n     adalah program akademik yang menggabungkan prinsip-prinsip bisnis dengan teknologi informasi. Ini bertujuan untuk melatih mahasiswa dalam perancangan, pengembangan, implementasi, dan manajemen sistem informasi yang digunakan untuk mengelola data, memproses informasi, dan mendukung keputusan dalam berbagai organisasi dan bisnis."
+    }
+
+
+]
