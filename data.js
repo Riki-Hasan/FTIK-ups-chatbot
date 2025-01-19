@@ -5,13 +5,13 @@ function kontak(name){
         case 'informatika':
         case 'sistem informasi':
         case 'teknik industri':
-            return 'http://api.whatsapp.com/send?phone=6287837152915/PakBambang';
+            return {nama:'Pak bambang',link:'http://api.whatsapp.com/send?phone=6287837152915/PakBambang'};
             break;
         case 'teknik mesin':
-            return 'http://api.whatsapp.com/send?phone=6285866670250/PakHendi';
+            return {nama:'Pak Hendi',link:'http://api.whatsapp.com/send?phone=6285866670250/PakHendi'};
             break;
         case 'teknik sipil':
-            return 'http://api.whatsapp.com/send?phone=6285742422530/BuAni';
+            return {nama:'Bu Ani',link:'http://api.whatsapp.com/send?phone=6285742422530/BuAni'};
             break;
     }
 }
@@ -46,7 +46,8 @@ function syaratPendaftaran (first_name,last_name){
 }
 
 function informasiPendaftaran(prodi){
-    return`Untuk informasi pendaftaran bisa klik perintah berikut:\n     a) ${prodi} /syarat_pendaftaran\n     b) ${prodi} /pendaftaran_online\n     c) ${prodi} /pendaftaran_offline \n     d) hubungi admin ${prodi} pada link dibawah ini.\n(${kontak(prodi)})`
+    const {nama,link} = kontak(prodi)
+    return`Untuk informasi pendaftaran bisa klik perintah berikut:\n     a) ${prodi} /syarat_pendaftaran\n     b) ${prodi} /pendaftaran_online\n     c) ${prodi} /pendaftaran_offline \n     d)<a href="${link}"> Hubungi admin (${nama})</a>`
  }
 
 function menanganiIya(first_name,last_name){

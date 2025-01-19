@@ -55,23 +55,23 @@ bot.command('tidak', (ctx) => {
 });
 bot.command('informatika', async (ctx) => {
     await ctx.reply(cariData('informatika') + jalurDanKelas, { parse_mode: 'HTML' });
-    ctx.reply(informasiPendaftaran('informatika'));
+    ctx.reply(informasiPendaftaran('informatika'), { parse_mode: 'HTML' });
 });
 bot.command('sipil', async (ctx) => {
     await ctx.reply(cariData('teknik sipil') + jalurDanKelas, { parse_mode: 'HTML' });
-    ctx.reply(informasiPendaftaran('teknik sipil'));
+    ctx.reply(informasiPendaftaran('teknik sipil'), { parse_mode: 'HTML' });
 });
 bot.command('mesin', async (ctx) => {
     await ctx.reply(cariData('teknik mesin') + jalurDanKelas, { parse_mode: 'HTML' });
-    ctx.reply(informasiPendaftaran('teknik mesin'));
+    ctx.reply(informasiPendaftaran('teknik mesin'), { parse_mode: 'HTML' });
 });
 bot.command('SI', async (ctx) => {
     await ctx.reply(cariData('sistem informasi') + jalurDanKelas, { parse_mode: 'HTML' });
-    ctx.reply(informasiPendaftaran('sistem informasi'));
+    ctx.reply(informasiPendaftaran('sistem informasi'), { parse_mode: 'HTML' });
 });
 bot.command('industri', async (ctx) => {
     await ctx.reply(cariData('teknik industri') + jalurDanKelas, { parse_mode: 'HTML' });
-    ctx.reply(informasiPendaftaran('teknik industri'));
+    ctx.reply(informasiPendaftaran('teknik industri'), { parse_mode: 'HTML' });
 });
 bot.command('syarat_pendaftaran', async (ctx) => {
     await ctx.reply(syaratPendaftaran(ctx.from.first_name,ctx.from.last_name), { parse_mode: 'HTML' });
@@ -90,15 +90,15 @@ bot.command('pendaftaran_offline', async (ctx) => {
 
 
 // Menangani pesan teks
-bot.on('text', (ctx) => { 
+bot.on('text',  (ctx) => { 
     const userMessage = ctx.message.text.toLowerCase(); 
     let responseFound = false;
     
-    const response = responses.find(r => {
+   const response =  responses.find((r) => {
         if (r.question === userMessage) {
             responseFound = true;
             ctx.reply(r.answer + jalurDanKelas, { parse_mode: 'HTML' })
-            ctx.reply(informasiPendaftaran(r.question));
+            ctx.reply(informasiPendaftaran(r.question), { parse_mode: 'HTML' });
             return true;
 
         } else if (r.question + " syarat pendaftaran" === userMessage) {
@@ -117,7 +117,7 @@ bot.on('text', (ctx) => {
 
         } else if (r.question + " pendaftaran offline" === userMessage) {
             ctx.reply(pendaftaranOffline);
-            ctx.reply(informasiPendaftaran(r.question));
+            ctx.reply(informasiPendaftaran(r.question), { parse_mode: 'HTML' });
             ctx.reply(pilihanAkhiran, { parse_mode: 'HTML' });
             responseFound = true; 
             return true; 
